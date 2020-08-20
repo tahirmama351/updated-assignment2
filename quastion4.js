@@ -15,9 +15,7 @@ let numberOfTeam = prompt("Enter number of team you want: ");
 let numberOfStudentsInTheTeam;
 numberOfStudentsInTheTeam = Math.floor(totalNumberOfStudents/numberOfTeam);
 let studentsNotAssignedYet;
-studentsNotAssignedYet = totalNumberOfStudents % numberOfTeam;
-let phrase = `${studentsNotAssignedYet} teams with 
-${numberOfStudentsInTheTeam+ 1} members
-${numberOfTeam - studentsNotAssignedYet} and teams with
-${numberOfStudentsInTheTeam} members.`;
+    studentsNotAssignedYet = totalNumberOfStudents % numberOfTeam;
+let phrase = `${studentsNotAssignedYet} teams with ${numberOfStudentsInTheTeam+ 1} members and
+${numberOfTeam - studentsNotAssignedYet}  teams with ${numberOfStudentsInTheTeam} members.`;
 console.log(phrase);

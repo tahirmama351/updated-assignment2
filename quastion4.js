@@ -21,6 +21,11 @@ numberOfStudentsInTheTeam = Math.floor(totalNumberOfStudents/numberOfTeam);
 let studentsNotAssignedYet;
 studentsNotAssignedYet = totalNumberOfStudents % numberOfTeam;
 
-let phrase = `${numberOfTeam - studentsNotAssignedYet}  teams with ${numberOfStudentsInTheTeam} members and ${studentsNotAssignedYet} teams with ${numberOfStudentsInTheTeam + 1} members.`;
+let team_with_low_members = `${numberOfTeam - studentsNotAssignedYet}  teams each with ${numberOfStudentsInTheTeam} members`
+let team_with_high_members= `${studentsNotAssignedYet} teams each with ${numberOfStudentsInTheTeam + 1} members.`;
+if (studentsNotAssignedYet ===0){
+console.log(team_with_low_members)
 
-console.log(phrase);
+}else{
+console.log(team_with_low_members + " and " + team_with_high_members )
+}

@@ -10,12 +10,17 @@ output:
   *number of students in a team.
 */
 let prompt = require('prompt-sync')();
+
 let totalNumberOfStudents = prompt("Enter number of studens in the class: ");
+
 let numberOfTeam = prompt("Enter number of team you want: ");
+
 let numberOfStudentsInTheTeam;
 numberOfStudentsInTheTeam = Math.floor(totalNumberOfStudents/numberOfTeam);
+
 let studentsNotAssignedYet;
-    studentsNotAssignedYet = totalNumberOfStudents % numberOfTeam;
-let phrase = `${studentsNotAssignedYet} teams with ${numberOfStudentsInTheTeam+ 1} members and
-${numberOfTeam - studentsNotAssignedYet}  teams with ${numberOfStudentsInTheTeam} members.`;
+studentsNotAssignedYet = totalNumberOfStudents % numberOfTeam;
+
+let phrase = `${numberOfTeam - studentsNotAssignedYet}  teams with ${numberOfStudentsInTheTeam} members and ${studentsNotAssignedYet} teams with ${numberOfStudentsInTheTeam + 1} members.`;
+
 console.log(phrase);
